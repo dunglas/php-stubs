@@ -627,7 +627,7 @@ function stream_supports_lock ($stream) {}
  * handle is supplied or false on other errors,
  * including end of file.
  */
-function fgetcsv ($handle, $length = null, $delimiter = null, $enclosure = null, $escape = null) {}
+function fgetcsv ($handle, $length = 0, $delimiter = ",", $enclosure = '"', $escape = "\") {}
 
 /**
  * (PHP 5 &gt;= 5.1.0)<br/>
@@ -645,9 +645,13 @@ function fgetcsv ($handle, $length = null, $delimiter = null, $enclosure = null,
  * The optional enclosure parameter sets the field
  * enclosure (one character only).
  * </p>
+ * @param string $escape_char [optional] <p>
+ * The optional escape_char parameter sets the escape
+ * character (one character only).
+ * </p>
  * @return int the length of the written string&return.falseforfailure;.
  */
-function fputcsv ($handle, array $fields, $delimiter = null, $enclosure = null) {}
+function fputcsv ($handle, array $fields, $delimiter = ",", $enclosure = "'", $escape_char = "\") {}
 
 /**
  * (PHP 4, PHP 5)<br/>
